@@ -42,7 +42,7 @@ const Contact = () => {
 
     return (
         <div className='bg-slate-800 text-white flex lg:flex-row flex-col gap-10 justify-center'>
-            <div>
+            <div className='py-10'>
                 <div className='bg-slate-900 p-5'>
                     <div className='border-1 py-5 px-10 bg-slate-600 border-slate-300 mt-10 hover:bg-slate-700'>
                         <p>Phone : 01812967146</p>
