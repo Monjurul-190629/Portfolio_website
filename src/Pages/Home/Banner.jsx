@@ -2,9 +2,30 @@ import React, { useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { IoCodeDownloadOutline } from "react-icons/io5";
+import  { useEffect } from 'react';
+import useDrivePicker from 'react-google-drive-picker'
+
 
 const Banner = () => {
     const [isVisible, setIsVisible] = useState(true);  // You can set this dynamically based on user interaction or other events
+    
+    
+    const handleDownload = () => {
+        // Replace 'YOUR_FILE_ID' with the actual file ID from your Google Drive link
+        const fileId = '106beNrBtNEgUi6cYKncjJvbBWAtujxmM';
+        const downloadLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
+    
+        // Create an anchor element and trigger a click to start the download
+        const link = document.createElement('a');
+        link.href = downloadLink;
+        link.download = 'downloaded-file.pdf'; // Name of the file to be downloaded
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      };
+
+
 
     return (
         <div>
@@ -53,6 +74,11 @@ const Banner = () => {
                         <Link to="/Contact">
                             <button className="btn  bg-slate-600 text-white hover:bg-slate-700 hover:text-white">Contact me</button>
                         </Link>
+                        <br></br>
+                        {/* <button onClick={downloadPdf} className='btn border-r-2 bg-inherit'>Download Resume <IoCodeDownloadOutline /></button> */}
+                        <button className="btn mt-4 bg-slate-700 text-white hover:bg-transparent" onClick={handleDownload}>
+                            Download Resume <IoCodeDownloadOutline className='text-4xl'></IoCodeDownloadOutline>
+                        </button>
                     </div>
                 </motion.div>
             </div>
