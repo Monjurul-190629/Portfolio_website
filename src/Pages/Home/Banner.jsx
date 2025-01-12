@@ -12,10 +12,10 @@ const Banner = () => {
     
     
     const handleDownload = () => {
-        // Replace 'YOUR_FILE_ID' with the actual file ID from your Google Drive link
-        const fileId = '106beNrBtNEgUi6cYKncjJvbBWAtujxmM';
+        // Extract the file ID from the URL
+        const fileId = '1HaY-CqAJiQ8s93jl00W9wctAWxnIRgyw'; // File ID from the provided Google Drive link
         const downloadLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
-    
+      
         // Create an anchor element and trigger a click to start the download
         const link = document.createElement('a');
         link.href = downloadLink;
@@ -23,7 +23,8 @@ const Banner = () => {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-      };
+    };
+    
 
 
 
@@ -37,8 +38,9 @@ const Banner = () => {
                     transition={{ duration: 1 }}            // Animation duration (1 second)
                 >
                     <motion.img
-                        src="https://toppng.com/uploads/preview/stock-person-png-stock-photo-man-11563049686zqeb9zmqjd.png"
-                        className="max-w-sm rounded-full shadow-2xl"
+                        src="https://i.ibb.co.com/wg9Nd5y/1729456002257.jpg"
+                        border="0"
+                        className="max-w-md rounded-full shadow-md p-5"
                         alt="Banner Image"
                         initial={{ scale: 0 }}                // Start with image scaled down
                         animate={{ scale: 1 }}                // Animate it to full scale
@@ -55,11 +57,13 @@ const Banner = () => {
                         </motion.h1>
                         <TypeAnimation
                             sequence={[
+                                'Junior Software Engineer',
+                                2000,
                                 'Web Developer',
                                 2000,
                                 'Front-End Developer',
                                 2000,
-                                'Mern Stack Developer',
+                                'MERN Stack Developer',
                                 2000,
                             ]}
                             wrapper="span"
@@ -76,12 +80,14 @@ const Banner = () => {
                         </Link>
                         <br></br>
                         {/* <button onClick={downloadPdf} className='btn border-r-2 bg-inherit'>Download Resume <IoCodeDownloadOutline /></button> */}
-                        <button className="btn mt-4 bg-slate-700 text-white hover:bg-transparent" onClick={handleDownload}>
+                        <button className="btn mt-4 bg-slate-600 text-white hover:bg-transparent" onClick={handleDownload}>
                             Download Resume <IoCodeDownloadOutline className='text-4xl'></IoCodeDownloadOutline>
                         </button>
                     </div>
+                    
                 </motion.div>
             </div>
+            <div className="divider divider-neutral text-white text-3xl  ">About</div>
         </div>
     );
 };
