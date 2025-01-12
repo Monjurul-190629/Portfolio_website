@@ -13,7 +13,7 @@ const Banner = () => {
     
     const handleDownload = () => {
         // Extract the file ID from the URL
-        const fileId = '1HaY-CqAJiQ8s93jl00W9wctAWxnIRgyw'; // File ID from the provided Google Drive link
+        const fileId = '1zpidxJ5hZhYGgKezitrlfnbyA_QOnqOB'; // File ID from the provided Google Drive link
         const downloadLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
       
         // Create an anchor element and trigger a click to start the download
