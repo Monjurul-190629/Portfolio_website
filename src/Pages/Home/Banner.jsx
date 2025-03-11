@@ -1,91 +1,96 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { IoCodeDownloadOutline } from "react-icons/io5";
-import  { useEffect } from 'react';
-import useDrivePicker from 'react-google-drive-picker'
-
 
 const Banner = () => {
-    const [isVisible, setIsVisible] = useState(true);  // You can set this dynamically based on user interaction or other events
-    
-    
     const handleDownload = () => {
-        // Extract the file ID from the URL
-        const fileId = '1zpidxJ5hZhYGgKezitrlfnbyA_QOnqOB'; // File ID from the provided Google Drive link
+        const fileId = '1zpidxJ5hZhYGgKezitrlfnbyA_QOnqOB';
         const downloadLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
-      
-        // Create an anchor element and trigger a click to start the download
         const link = document.createElement('a');
         link.href = downloadLink;
-        link.download = 'downloaded-file.pdf'; // Name of the file to be downloaded
+        link.download = 'Monjurul-Alam-Resume.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
     };
-    
-
-
 
     return (
-        <div>
-            <div className="hero bg-slate-800 text-white py-10 flex justify-center items-center -mt-3">
+        <div className="bg-slate-900 text-white py-12 lg:pt-32 px-4 sm:px-6 md:px-12">
+            <motion.div
+                className="flex flex-col md:flex-row items-center justify-center gap-6 sm:gap-10"
+                initial={{ opacity: 0.5, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }}
+            >
+                {/* Profile Image */}
                 <motion.div
-                    className="hero-content flex-col lg:flex-row-reverse items-center"
-                    initial={{ opacity: 0.5, x: -100 }}        // Starting state
-                    animate={{ opacity: isVisible ? 1 : 0, x: 0 }}   // Animation state
-                    transition={{ duration: 1 }}            // Animation duration (1 second)
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 1.2 }}
                 >
-                    <motion.img
+                    <img
                         src="https://i.ibb.co.com/wg9Nd5y/1729456002257.jpg"
-                        border="0"
-                        className="max-w-sm rounded-full shadow-sm p-5"
-                        alt="Banner Image"
-                        initial={{ scale: 0 }}                // Start with image scaled down
-                        animate={{ scale: 1 }}                // Animate it to full scale
-                        transition={{ duration: 1.4 }}        // Image animation timing
+                        alt="Monjurul Alam"
+                        className="w-32 sm:w-40 md:w-52 lg:w-60 rounded-full border-4 border-blue-500 shadow-lg"
                     />
-                    <div className="text-center lg:text-left">
-                        <motion.h1
-                            className="lg:text-4xl sm:text-xl lg:font-semibold"
-                            initial={{ opacity: 0, y: -50 }}    // Text fades in from above
-                            animate={{ opacity: 1, y: 0 }}      // Full opacity and in position
-                            transition={{ duration: 1, delay: 0.5 }}  // Delays text by 0.5 seconds
-                        >
-                            Hi, I am <br></br> Monjurul Alam
-                        </motion.h1>
-                        <TypeAnimation
-                            sequence={[
-                                'Junior Software Engineer',
-                                2000,
-                                'Front-End Developer',
-                                2000,
-                                'MERN Stack Developer',
-                                2000,
-                            ]}
-                            wrapper="span"
-                            speed={50}
-                            style={{ fontSize: '22px', display: 'inline-block' }}
-                            repeat={Infinity}
-                        />
-                        <br></br>
-                        <Link to="/Project">
-                            <button className="btn bg-slate-600 text-white hover:bg-slate-700 hover:text-white mt-4 mr-2">See my Projects</button>
-                        </Link>
-                        <Link to="/Contact">
-                            <button className="btn  bg-slate-600 text-white hover:bg-slate-700 hover:text-white">Contact me</button>
-                        </Link>
-                        <br></br>
-                        {/* <button onClick={downloadPdf} className='btn border-r-2 bg-inherit'>Download Resume <IoCodeDownloadOutline /></button> */}
-                        <button className="btn mt-4 bg-slate-600 text-white hover:bg-transparent" onClick={handleDownload}>
-                            Download Resume <IoCodeDownloadOutline className='text-4xl'></IoCodeDownloadOutline>
-                        </button>
-                    </div>
-                    
                 </motion.div>
-            </div>
-            <div className="divider divider-neutral text-white text-3xl  ">About</div>
+
+                {/* Text Content */}
+                <div className="text-center md:text-left max-w-lg">
+                    <motion.h1
+                        className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue-400 leading-tight"
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 0.5 }}
+                    >
+                        Hi, I'm <br /> Monjurul Alam
+                    </motion.h1>
+
+                    <TypeAnimation
+                        sequence={[
+                            'Junior Software Engineer', 2000,
+                            'Front-End Developer', 2000,
+                            'MERN Stack Developer', 2000,
+                        ]}
+                        wrapper="span"
+                        speed={50}
+                        className="text-sm sm:text-base font-medium text-gray-300"
+                        repeat={Infinity}
+                    />
+
+                    {/* Buttons */}
+                    <div className="mt-6 flex flex-wrap gap-2 sm:gap-4 justify-center md:justify-start">
+                        <Link to="/Project">
+                            <motion.button
+                                className="px-4 sm:px-5 py-2.5 text-xs sm:text-sm bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition"
+                                whileHover={{ scale: 1.05 }}
+                            >
+                                See my Projects
+                            </motion.button>
+                        </Link>
+
+                        <Link to="/Contact">
+                            <motion.button
+                                className="px-4 sm:px-5 py-2.5 text-xs sm:text-sm bg-gray-700 text-white rounded-lg shadow-md hover:bg-gray-800 transition"
+                                whileHover={{ scale: 1.05 }}
+                            >
+                                Contact Me
+                            </motion.button>
+                        </Link>
+                    </div>
+
+                    {/* Resume Download Button */}
+                    <motion.button
+                        className="mt-6 px-4 sm:px-5 py-2.5 flex items-center justify-center gap-2 bg-transparent border-2 border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500 hover:text-white transition text-xs sm:text-sm"
+                        onClick={handleDownload}
+                        whileHover={{ scale: 1.05 }}
+                    >
+                        Download Resume <IoCodeDownloadOutline className="text-sm sm:text-lg" />
+                    </motion.button>
+                </div>
+            </motion.div>
         </div>
     );
 };
