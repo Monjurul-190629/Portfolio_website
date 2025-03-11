@@ -1,6 +1,12 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Project = () => {
+  const cardVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <div className="bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 text-white lg:p-20 p-6 -mt-5">
       <h2 className="text-4xl font-extrabold mb-8 text-center">Top Projects</h2>
@@ -8,7 +14,14 @@ const Project = () => {
       {/* Project List */}
       <div className="space-y-16">
         {/* Project 1 */}
-        <div className="bg-slate-700 shadow-lg rounded-lg p-6 lg:p-10">
+        <motion.div
+          className="bg-slate-700 shadow-lg rounded-lg p-6 lg:p-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          variants={cardVariant}
+        >
           <h3 className="text-2xl font-bold mb-4">1. Asset Management Web Application</h3>
           <p className="mb-4 text-gray-300">
             <strong>Description:</strong> This application serves as a centralized platform to manage the assets of employees across various companies. It offers features like assigning assets to employees, tracking their usage, and monitoring asset lifecycle. The user-friendly dashboard enables managers to generate reports and gain valuable insights into asset allocation, usage trends, and inventory updates.
@@ -45,13 +58,20 @@ const Project = () => {
               Server Code
             </a>
           </div>
-        </div>
+        </motion.div>
 
         {/* Project 2 */}
-        <div className="bg-slate-700 shadow-lg rounded-lg p-6 lg:p-10">
+        <motion.div
+          className="bg-slate-700 shadow-lg rounded-lg p-6 lg:p-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          variants={cardVariant}
+        >
           <h3 className="text-2xl font-bold mb-4">2. Online Job Seeking Web Application</h3>
           <p className="mb-4 text-gray-300">
-            <strong>Description:</strong> This platform bridges the gap between job seekers and employers by providing an interactive space to explore job listings and submit applications. Employers can post vacancies, view applicant profiles, and streamline hiring. Job seekers are allowed to submit application for jobs and making the process efficient and user-friendly.
+            <strong>Description:</strong> This platform bridges the gap between job seekers and employers by providing an interactive space to explore job listings and submit applications. Employers can post vacancies, view applicant profiles, and streamline hiring. Job seekers are allowed to submit applications for jobs, making the process efficient and user-friendly.
           </p>
           <p className="mb-4 text-gray-300">
             <strong>Technology Used:</strong> HTML, CSS, Tailwind CSS, Daisy UI, React.js, Node.js, Express.js, MongoDB, Firebase, Vercel.
@@ -85,10 +105,17 @@ const Project = () => {
               Server Code
             </a>
           </div>
-        </div>
+        </motion.div>
 
         {/* Project 3 */}
-        <div className="bg-slate-700 shadow-lg rounded-lg p-6 lg:p-10">
+        <motion.div
+          className="bg-slate-700 shadow-lg rounded-lg p-6 lg:p-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          variants={cardVariant}
+        >
           <h3 className="text-2xl font-bold mb-4">3. Online Transport Web Application</h3>
           <p className="mb-4 text-gray-300">
             <strong>Description:</strong> This platform simplifies the process of booking transport by allowing users to hire buses, motorbikes, and minibikes for tours, events, or personal needs. Users can check real-time availability, compare vehicle options, and make bookings seamlessly. The application is tailored for individuals and groups, ensuring reliable transportation with minimal effort.
@@ -117,7 +144,7 @@ const Project = () => {
               GitHub Code
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

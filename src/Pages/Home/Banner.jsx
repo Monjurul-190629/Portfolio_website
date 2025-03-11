@@ -30,7 +30,7 @@ const Banner = () => {
 
     return (
         <div>
-            <div className="hero bg-slate-800 text-white min-h-screen flex justify-center items-center -mt-3">
+            <div className="hero bg-slate-800 text-white py-10 flex justify-center items-center -mt-3">
                 <motion.div
                     className="hero-content flex-col lg:flex-row-reverse items-center"
                     initial={{ opacity: 0.5, x: -100 }}        // Starting state
@@ -40,11 +40,11 @@ const Banner = () => {
                     <motion.img
                         src="https://i.ibb.co.com/wg9Nd5y/1729456002257.jpg"
                         border="0"
-                        className="max-w-md rounded-full shadow-md p-5"
+                        className="max-w-sm rounded-full shadow-sm p-5"
                         alt="Banner Image"
                         initial={{ scale: 0 }}                // Start with image scaled down
                         animate={{ scale: 1 }}                // Animate it to full scale
-                        transition={{ duration: 1.2 }}        // Image animation timing
+                        transition={{ duration: 1.4 }}        // Image animation timing
                     />
                     <div className="text-center lg:text-left">
                         <motion.h1
@@ -58,8 +58,6 @@ const Banner = () => {
                         <TypeAnimation
                             sequence={[
                                 'Junior Software Engineer',
-                                2000,
-                                'Web Developer',
                                 2000,
                                 'Front-End Developer',
                                 2000,
