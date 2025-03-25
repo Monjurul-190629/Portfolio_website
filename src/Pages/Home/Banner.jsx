@@ -6,7 +6,7 @@ import { IoCodeDownloadOutline } from "react-icons/io5";
 
 const Banner = () => {
     const handleDownload = () => {
-        const fileId = '1zpidxJ5hZhYGgKezitrlfnbyA_QOnqOB';
+        const fileId = '1e103y8_zbOtkfLrS4RgB7D9l5hQvcd_d';
         const downloadLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
         const link = document.createElement('a');
         link.href = downloadLink;
