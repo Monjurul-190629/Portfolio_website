@@ -62,15 +62,15 @@ const Contact = () => {
             Contact Information
           </h3>
           <div className="mt-6 space-y-6">
-            <div className="flex items-center space-x-4 bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center space-x-0 sm:space-x-4 bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
               <span className="text-blue-300 font-medium">📞 Phone:</span>
               <span className="text-gray-300">+8801812967146</span>
             </div>
-            <div className="flex items-center space-x-4 bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center space-x-0 sm:space-x-4 bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition break-words whitespace-normal">
               <span className="text-blue-300 font-medium">✉ Email:</span>
-              <span className="text-gray-300">monjurulalam190629@gmail.com</span>
+              <span className="text-gray-300 break-words">monjurulalam190629@gmail.com</span>
             </div>
-            <div className="flex items-center space-x-4 bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center space-x-0 sm:space-x-4 bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition">
               <span className="text-blue-300 font-medium">📍 Address:</span>
               <span className="text-gray-300">Pabna, Bangladesh</span>
             </div>
@@ -108,44 +108,13 @@ const Contact = () => {
 
           <form ref={formRef} onSubmit={sendEmail} className="mt-6">
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">
-              <input
-                type="text"
-                name="from_name"
-                placeholder="Your Name"
-                className="input w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:border-blue-400 focus:ring-2 focus:ring-blue-300"
-                required
-              />
-              <input
-                type="email"
-                name="from_email"
-                placeholder="Your Email"
-                className="input w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:border-blue-400 focus:ring-2 focus:ring-blue-300"
-                required
-              />
-              <input
-                type="text"
-                name="from_phone"
-                placeholder="Your Phone (optional)"
-                className="input w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:border-blue-400 focus:ring-2 focus:ring-blue-300"
-              />
-              <input
-                type="text"
-                name="subject"
-                placeholder="Subject"
-                className="input w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:border-blue-400 focus:ring-2 focus:ring-blue-300"
-              />
+              <input type="text" name="from_name" placeholder="Your Name" className="input w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:border-blue-400 focus:ring-2 focus:ring-blue-300" required />
+              <input type="email" name="from_email" placeholder="Your Email" className="input w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:border-blue-400 focus:ring-2 focus:ring-blue-300" required />
+              <input type="text" name="from_phone" placeholder="Your Phone (optional)" className="input w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:border-blue-400 focus:ring-2 focus:ring-blue-300" />
+              <input type="text" name="subject" placeholder="Subject" className="input w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:border-blue-400 focus:ring-2 focus:ring-blue-300" />
             </div>
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows="5"
-              className="w-full p-3 mt-6 bg-gray-700 rounded-lg border border-gray-600 focus:border-blue-400 focus:ring-2 focus:ring-blue-300"
-              required
-            />
-            <button
-              type="submit"
-              className="w-full py-3 mt-4 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-400 transition duration-300"
-            >
+            <textarea name="message" placeholder="Your Message" rows="5" className="w-full p-3 mt-6 bg-gray-700 rounded-lg border border-gray-600 focus:border-blue-400 focus:ring-2 focus:ring-blue-300" required />
+            <button type="submit" className="w-full py-3 mt-4 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-400 transition duration-300">
               Send Message
             </button>
           </form>
