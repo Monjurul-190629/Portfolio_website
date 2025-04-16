@@ -25,6 +25,17 @@ const Project = () => {
         {[
           {
             id: 1,
+            title: "Dua Web App",
+            description:
+              "A beautifully designed and fully responsive web application that allows users to explore, read, and benefit from a collection of Duas, organized by categories and subcategories for easy navigation and accessibility.",
+            tech: "Next.js, Tailwind CSS, Node.js, Express.js, Sqlite, Vercel, Railway",
+            img: "https://img.freepik.com/premium-photo/sheikh-zayed-grand-mosque-abu-dhabi-united-arab-emirates_255175-2412.jpg",
+            live: "https://dua-web-app-12345.vercel.app/",
+            client: "https://github.com/Monjurul-190629/Dua-web-app",
+            
+          },
+          {
+            id: 2,
             title: "Asset Management Web App",
             description:
               "A centralized platform for managing employee assets, tracking their lifecycle, and generating insightful reports.",
@@ -36,7 +47,7 @@ const Project = () => {
               "https://github.com/Monjurul-190629/Asset-management-website-server",
           },
           {
-            id: 2,
+            id: 3,
             title: "Online Job Portal Web App",
             description:
               "An interactive platform for job seekers and employers to connect efficiently and manage applications seamlessly.",
@@ -49,7 +60,7 @@ const Project = () => {
               "https://github.com/Monjurul-190629/job-seeking-website-server",
           },
           {
-            id: 3,
+            id: 4,
             title: "Online Transport Web App",
             description:
               "A hassle-free transport booking system where users can hire buses, motorbikes, and minibikes for tours or personal needs.",
