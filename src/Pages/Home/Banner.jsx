@@ -6,7 +6,7 @@ import { IoCodeDownloadOutline } from "react-icons/io5";
 
 const Banner = () => {
     const handleDownload = () => {
-        const fileId = '1e103y8_zbOtkfLrS4RgB7D9l5hQvcd_d';
+        const fileId = '1xSmX1Xe__RByWdidZ5T5h2L7fP2JevjJ'; // new resume is added
         const downloadLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
         const link = document.createElement('a');
         link.href = downloadLink;
