@@ -27,7 +27,7 @@ const Project = () => {
             id: 1,
             title: "Dua Web App",
             description:
-              "A beautifully designed and fully responsive web application that allows users to explore, read, and benefit from a collection of Duas, organized by categories and subcategories for easy navigation and accessibility.",
+              "A beautifully designed and fully responsive web application that allows users to explore, read, and benefit from a collection of Duas, organized by categories and subcategories for easy accessibility.",
             tech: "Next.js, Tailwind CSS, Node.js, Express.js, Sqlite, Vercel, Railway",
             img: "https://img.freepik.com/premium-photo/sheikh-zayed-grand-mosque-abu-dhabi-united-arab-emirates_255175-2412.jpg",
             live: "https://dua-web-app-12345.vercel.app/",
