@@ -65,7 +65,7 @@ const Education = () => {
                         <p className="text-2xl font-bold text-blue-400 mb-2">🎓 B.Sc in Engineering</p>
                         <p className="text-lg"><span className="font-semibold text-gray-300">University:</span> Pabna University of Science and Technology</p>
                         <p className="text-lg"><span className="font-semibold text-gray-300">Subject:</span> Information and Communication Engineering (ICE)</p>
-                        <p className="text-lg"><span className="font-semibold text-gray-300">CGPA:</span> 3.14 our of 4.00</p>
+                        <p className="text-lg"><span className="font-semibold text-gray-300">CGPA:</span> 3.14 out of 4.00</p>
                     </motion.div>
 
                 </div>
