@@ -40,7 +40,7 @@ const Project = () => {
             description:
               "A centralized platform for managing employee assets, tracking their lifecycle, and generating insightful reports.",
             tech: "React.js, Node.js, MongoDB, Tailwind, Firebase, Vercel",
-            img: "https://e3zine.com/wp-content/uploads/2017/09/IT_asset_management_shutterstock_420469072web.jpg",
+            img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop",
             live: "https://service-provider-ba91f.web.app/",
             client: "https://github.com/Monjurul-190629/Asset-management-website",
             server:
@@ -70,6 +70,17 @@ const Project = () => {
             client:
               "https://github.com/Monjurul-190629/Bus_Transport_Web/tree/main/transport-app",
           },
+          {
+            id: 5,
+            title: "BudgetBloom - Personal Finance Management Platform",
+            description:
+               "A modern full-stack personal finance management platform that helps users track income, expenses, savings goals, wallets, and financial analytics through an intuitive and responsive dashboard.",
+            tech: "Next.js, TypeScript, Tailwind CSS, shadcn/ui, Zustand, TanStack Query, Recharts, Node.js, Express.js, MongoDB, Mongoose, JWT",
+            img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop",
+            live: "https://budget-bloome-j9vg.vercel.app/",
+            client: "https://github.com/Monjurul-190629/BudgetBloome",
+          },
+         
         ].map((project) => (
           <motion.div
             key={project.id}
