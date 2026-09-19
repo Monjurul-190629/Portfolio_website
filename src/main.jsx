@@ -4,8 +4,14 @@ import './index.css'
 import {
   RouterProvider,
 } from "react-router-dom";
+import * as Sentry from "@sentry/react";
 
 import { router } from './routers/router';
+
+Sentry.init({
+  dsn: import.meta.env.VITE_SENTRY_DSN,
+  environment: import.meta.env.MODE,
+});
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
